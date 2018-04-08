@@ -1,0 +1,16 @@
+server:
+  port: 8010
+  context-path: /
+  compression:
+    enabled: true
+  session:
+    timeout: 1000
+  tomcat:
+    uri-encoding: UTF-8
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${server.port}:${random.value}
+spring:
+  application:
+    name: SERVICE-TICKET    
