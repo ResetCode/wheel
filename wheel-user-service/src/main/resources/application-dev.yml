@@ -34,3 +34,6 @@ spring:
       filters: stat
       stat-view-servlet:
         url-pattern: /druid/*
+logging:
+  level:
+    mybatis: debug

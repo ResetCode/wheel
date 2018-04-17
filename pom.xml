@@ -15,6 +15,7 @@
   	<module>wheel-ticket-service</module>
   	<module>wheel-core</module>
   	<module>wheel-user-service</module>
+  	<module>wheel-turbine</module>
   </modules>
   
   
@@ -45,7 +46,9 @@
 		<druid.version>1.1.5</druid.version>
 		<druid-spring-boot-starter.version>1.1.5</druid-spring-boot-starter.version>
 		<mysql-connector-java.version>6.0.6</mysql-connector-java.version>
-		
+		<mybatis.version>3.4.5</mybatis.version>
+		<mybatis-spring.version>1.3.1</mybatis-spring.version>
+		<mybatis-spring-boot-starter.version>1.3.1</mybatis-spring-boot-starter.version>
 		<jedis.version>2.9.0</jedis.version>
 		
 		<aopalliance.version>1.0</aopalliance.version>
@@ -118,6 +121,21 @@
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
 			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>${mybatis.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+			<version>${mybatis-spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>${mybatis-spring-boot-starter.version}</version>
 		</dependency>
 	</dependencies>
   </dependencyManagement>

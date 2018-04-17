@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.wheel.core.po.User;
+import com.wheel.core.response.JsonResponse;
 import com.wheel.server.client.UserClient;
 
 /**
@@ -25,7 +26,9 @@ public class UserController {
 	private UserClient userClient;
 
 	@GetMapping("/{id}")
-	public User getUser(@PathVariable("id") String id) {
-		return userClient.getById(id);
+	public JsonResponse<User> getUser(@PathVariable("id") String id) {
+
+		User user = userClient.getById(id);
+		return JsonResponse.successData(user);
 	}
 }

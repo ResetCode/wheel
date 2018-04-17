@@ -3,6 +3,8 @@
  */
 package com.wheel.server.fallback;
 
+import org.springframework.stereotype.Component;
+
 import com.wheel.core.po.User;
 import com.wheel.server.client.UserClient;
 
@@ -12,6 +14,7 @@ import feign.hystrix.FallbackFactory;
  * 
  * Created by liumohan 2018-04-04 20:01
  */
+@Component
 public class UserfallbackFactory extends AbstractBasefallbackFactory implements FallbackFactory<UserClient> {
 
 	/*

@@ -1,24 +1,24 @@
 /**
  * 
  */
-package com.wheel.user;
+package com.wheel.turbine;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.context.annotation.ComponentScan;
+import org.springframework.cloud.netflix.turbine.EnableTurbine;
 
 /**
  * 
- * Created by liumohan 2018-04-04 13:58
+ * Created by liumohan 2018-04-12 17:40
  */
 @SpringBootApplication
-@ComponentScan("com.wheel")
+@EnableTurbine
 @EnableEurekaClient
-public class UserApplication {
+public class TurbineApplication {
 
 	public static void main(String[] args) {
 
-		SpringApplication.run(UserApplication.class, args);
+		SpringApplication.run(TurbineApplication.class, args);
 	}
 }

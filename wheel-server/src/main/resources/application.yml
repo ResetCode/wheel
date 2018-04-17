@@ -16,3 +16,6 @@ spring:
     name: WHEEL-SERVER
   profiles:
     active: dev
+feign:
+  hystrix:
+    enabled: true

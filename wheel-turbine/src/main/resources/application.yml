@@ -1,0 +1,15 @@
+server:
+  port: 20011
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka:eureka123@localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${server.port}
+spring:
+  application:
+    name: WHEEL-TURBINE
+turbine:
+  appConfig: WHEEL-SERVER
+  clusterNameExpression: "'default'"

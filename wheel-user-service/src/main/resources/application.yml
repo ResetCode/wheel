@@ -12,11 +12,11 @@ eureka:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${server.port}:${random.value}
 spring:
-  jpa:
-    generate-ddl: false
-    show-sql: true
-    hibernate:
-      ddl-auto: false
+#  jpa:
+#    generate-ddl: false
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: false
   datasource:
     druid:
       driver-class-name: com.mysql.cj.jdbc.Driver
@@ -34,4 +34,20 @@ spring:
     multipart: 
       max-file-size: 50MB
       max-request-size: 55MB
+mybatis:
+  configuration:
+    # 缓存的全局开关
+    cache-enabled: true
+    # 延迟加载的全局开关
+    lazy-loading-enabled: true
+    # 等待数据库响应的秒数
+    default-statement-timeout: 600
+    # 开启自动驼峰命名规则映射
+    map-underscore-to-camel-case: true
+    # 当没有为参数提供特定的 JDBC 类型时，为空值指定 JDBC 类型
+    # NULL VARCHAR OTHER
+    jdbc-type-for-null: 'NULL'
+    # 指定当结果集中值为 null 的时候是否调用映射对象的 setter（map 对象时为 put）方法
+    call-setters-on-nulls: true
+  mapper-locations: classpath:mapper/*Mapper.xml
   

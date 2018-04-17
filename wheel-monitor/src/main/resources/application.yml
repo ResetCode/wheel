@@ -1,0 +1,16 @@
+server:
+  port: 20010
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${server.port}:${random.value}
+spring:
+  application:
+    name: WHEEL-MONITOR
+  profiles:
+    active: dev
+management:
+  security:
+    enabled: false
+feign:
+  
